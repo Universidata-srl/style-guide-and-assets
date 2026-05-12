@@ -19,7 +19,7 @@ Brand assets for Universidata. Browse by logo type below — each image links to
 
 ## Full Brand Kit Viewer
 
-Clone the repo or download the ZIP, then open `UniversiData_Brand_Kit.html` in any browser — shows all variants on the correct background with one-click downloads for every size and format.
+Clone the repo or download the ZIP, then open `index.html` in any browser — shows all variants on the correct background with one-click downloads for every size and format.
 
 ## Naming Convention
 

@@ -1,25 +1,16 @@
 # Universidata — Style Guide & Assets
 
-Brand assets for Universidata. Browse by logo type below — each image links to its folder with all variants and resolutions.
-
----
-
-<table width="100%">
-  <tr>
-    <td align="center" width="50%"><a href="SYMBOL/"><img src="SYMBOL/0.5x/universidata_symbol_color_white_0.5x.png"></a></td>
-    <td align="center" width="50%"><a href="LOGO_VERTICAL/"><img src="LOGO_VERTICAL/0.5x/universidata_logo_vertical_color_white_0.5x.png"></a></td>
-  </tr>
-</table>
-
----
-
 [![Logo Horizontal](LOGO_HORIZONTAL/1x/universidata_logo_color_white_1x.png)](LOGO_HORIZONTAL/)
 
 ---
 
-## Full Brand Kit Viewer
+Universidata — Style Guide & Assets is the central repository for all official brand assets. It includes the full logo system across three formats (symbol, horizontal, vertical), available in color and mono variants, for both light and dark backgrounds, in multiple resolutions and SVG.
 
-Clone the repo or download the ZIP, then open `index.html` in any browser — shows all variants on the correct background with one-click downloads for every size and format.
+Use the interactive brand kit to preview every variant and download the right file for your use case.
+
+**→ [Open Brand Kit](https://universidata-srl.github.io/style-guide-and-assets/)**
+
+---
 
 ## Naming Convention
 

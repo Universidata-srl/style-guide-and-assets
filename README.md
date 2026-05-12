@@ -4,15 +4,16 @@ Brand assets for Universidata. Browse by logo type below — each image links to
 
 ---
 
+<table width="100%">
+  <tr>
+    <td align="center" width="50%"><a href="SYMBOL/"><img src="SYMBOL/0.5x/universidata_symbol_color_white_0.5x.png"></a></td>
+    <td align="center" width="50%"><a href="LOGO_VERTICAL/"><img src="LOGO_VERTICAL/0.5x/universidata_logo_vertical_color_white_0.5x.png"></a></td>
+  </tr>
+</table>
+
+---
+
 [![Logo Horizontal](LOGO_HORIZONTAL/1x/universidata_logo_color_white_1x.png)](LOGO_HORIZONTAL/)
-
----
-
-[![Logo Vertical](LOGO_VERTICAL/0.5x/universidata_logo_vertical_color_white_0.5x.png)](LOGO_VERTICAL/)
-
----
-
-[![Symbol](SYMBOL/0.5x/universidata_symbol_color_white_0.5x.png)](SYMBOL/)
 
 ---
 

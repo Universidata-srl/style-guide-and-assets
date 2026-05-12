@@ -1,0 +1,10 @@
+# Illustrator source files
+*.ai
+
+# Spec/internal docs
+docs/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universidata — Brand Asset Kit</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F4F3EF;
+      --surface:   #FFFFFF;
+      --dark:      #111111;
+      --ink:       #0A0A0A;
+      --muted:     #888880;
+      --border:    #DDDBD4;
+      --pill-bg:   #ECEAE4;
+      --pill-ink:  #0A0A0A;
+      --radius:    6px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", "Fira Mono", "Consolas", "Menlo", monospace;
+      --font-serif: Georgia, "Times New Roman", serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 32px 96px;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 72px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    .header__brand {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      font-weight: normal;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .header__divider {
+      width: 1px;
+      height: 1.4rem;
+      background: var(--border);
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .header__subtitle {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 72px;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .section__title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section__line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Card grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Card ── */
+    .card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card--light {
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .card--dark {
+      background: var(--dark);
+    }
+
+    .card__preview {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .card--light .card__preview { background: #FFFFFF; }
+    .card--dark  .card__preview { background: #111111; }
+
+    .card__preview img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .card__meta {
+      padding: 16px 20px 18px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .card--dark .card__meta {
+      border-top: 1px solid #2A2A2A;
+      background: #1A1A1A;
+    }
+
+    .card__label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .card--dark .card__label {
+      color: #666660;
+    }
+
+    /* ── Pills ── */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      background: var(--pill-bg);
+      color: var(--pill-ink);
+      border: 1px solid transparent;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      cursor: pointer;
+    }
+
+    .pill:hover {
+      background: var(--ink);
+      color: #FFFFFF;
+    }
+
+    .card--dark .pill {
+      background: #2A2A2A;
+      color: #CCCCC8;
+      border-color: #333330;
+    }
+
+    .card--dark .pill:hover {
+      background: #FFFFFF;
+      color: #111111;
+      border-color: #FFFFFF;
+    }
+
+    .pill--svg {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--muted);
+    }
+
+    .pill--svg:hover {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+    }
+
+    .card--dark .pill--svg {
+      background: transparent;
+      border-color: #333330;
+      color: #666660;
+    }
+
+    .card--dark .pill--svg:hover {
+      background: #FFFFFF;
+      color: #111111;
+      border-color: #FFFFFF;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1 class="header__brand">Universidata</h1>
+    <div class="header__divider"></div>
+    <span class="header__subtitle">Brand Asset Kit</span>
+  </header>
+
+  <!-- ══ SYMBOL ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Symbol</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="grid">
+
+      <!-- Symbol · Color · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="SYMBOL/1x/universidata_symbol_color_black_1x.png" alt="Symbol — Color, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="SYMBOL/SVG/universidata_symbol_color_black.svg" download>SVG</a>
+            <a class="pill" href="SYMBOL/0.25x/universidata_symbol_color_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="SYMBOL/0.5x/universidata_symbol_color_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="SYMBOL/1x/universidata_symbol_color_black_1x.png" download>1×</a>
+            <a class="pill" href="SYMBOL/2x/universidata_symbol_color_black_2x.png" download>2×</a>
+            <a class="pill" href="SYMBOL/4x/universidata_symbol_color_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Symbol · Color · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="SYMBOL/1x/universidata_symbol_color_white_1x.png" alt="Symbol — Color, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="SYMBOL/SVG/universidata_symbol_color_white.svg" download>SVG</a>
+            <a class="pill" href="SYMBOL/0.25x/universidata_symbol_color_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="SYMBOL/0.5x/universidata_symbol_color_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="SYMBOL/1x/universidata_symbol_color_white_1x.png" download>1×</a>
+            <a class="pill" href="SYMBOL/2x/universidata_symbol_color_white_2x.png" download>2×</a>
+            <a class="pill" href="SYMBOL/4x/universidata_symbol_color_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Symbol · Mono · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="SYMBOL/1x/universidata_symbol_mono_black_1x.png" alt="Symbol — Mono, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="SYMBOL/SVG/universidata_symbol_mono_black.svg" download>SVG</a>
+            <a class="pill" href="SYMBOL/0.25x/universidata_symbol_mono_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="SYMBOL/0.5x/universidata_symbol_mono_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="SYMBOL/1x/universidata_symbol_mono_black_1x.png" download>1×</a>
+            <a class="pill" href="SYMBOL/2x/universidata_symbol_mono_black_2x.png" download>2×</a>
+            <a class="pill" href="SYMBOL/4x/universidata_symbol_mono_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Symbol · Mono · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="SYMBOL/1x/universidata_symbol_mono_white_1x.png" alt="Symbol — Mono, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="SYMBOL/SVG/universidata_symbol_mono_white.svg" download>SVG</a>
+            <a class="pill" href="SYMBOL/0.25x/universidata_symbol_mono_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="SYMBOL/0.5x/universidata_symbol_mono_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="SYMBOL/1x/universidata_symbol_mono_white_1x.png" download>1×</a>
+            <a class="pill" href="SYMBOL/2x/universidata_symbol_mono_white_2x.png" download>2×</a>
+            <a class="pill" href="SYMBOL/4x/universidata_symbol_mono_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ LOGO HORIZONTAL ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Logo Horizontal</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="grid">
+
+      <!-- Horizontal · Color · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="LOGO_HORIZONTAL/1x/universidata_logo_color_black_1x.png" alt="Logo Horizontal — Color, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_HORIZONTAL/SVG/universidata_logo_color_black.svg" download>SVG</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.25x/universidata_logo_color_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.5x/universidata_logo_color_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/1x/universidata_logo_color_black_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/2x/universidata_logo_color_black_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/4x/universidata_logo_color_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal · Color · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="LOGO_HORIZONTAL/1x/universidata_logo_color_white_1x.png" alt="Logo Horizontal — Color, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_HORIZONTAL/SVG/universidata_logo_color_white.svg" download>SVG</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.25x/universidata_logo_color_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.5x/universidata_logo_color_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/1x/universidata_logo_color_white_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/2x/universidata_logo_color_white_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/4x/universidata_logo_color_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal · Mono · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="LOGO_HORIZONTAL/1x/universidata_logo_mono_black_1x.png" alt="Logo Horizontal — Mono, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_HORIZONTAL/SVG/universidata_logo_mono_black.svg" download>SVG</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.25x/universidata_logo_mono_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.5x/universidata_logo_mono_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/1x/universidata_logo_mono_black_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/2x/universidata_logo_mono_black_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/4x/universidata_logo_mono_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal · Mono · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="LOGO_HORIZONTAL/1x/universidata_logo_mono_white_1x.png" alt="Logo Horizontal — Mono, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_HORIZONTAL/SVG/universidata_logo_mono_white.svg" download>SVG</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.25x/universidata_logo_mono_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/0.5x/universidata_logo_mono_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/1x/universidata_logo_mono_white_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/2x/universidata_logo_mono_white_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_HORIZONTAL/4x/universidata_logo_mono_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ LOGO VERTICAL ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Logo Vertical</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="grid">
+
+      <!-- Vertical · Color · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="LOGO_VERTICAL/1x/universidata_logo_vertical_color_black_1x.png" alt="Logo Vertical — Color, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_VERTICAL/SVG/universidata_logo_vertical_color_black.svg" download>SVG</a>
+            <a class="pill" href="LOGO_VERTICAL/0.25x/universidata_logo_vertical_color_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_VERTICAL/0.5x/universidata_logo_vertical_color_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_VERTICAL/1x/universidata_logo_vertical_color_black_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_VERTICAL/2x/universidata_logo_vertical_color_black_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_VERTICAL/4x/universidata_logo_vertical_color_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical · Color · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="LOGO_VERTICAL/1x/universidata_logo_vertical_color_white_1x.png" alt="Logo Vertical — Color, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Color · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_VERTICAL/SVG/universidata_logo_vertical_color_white.svg" download>SVG</a>
+            <a class="pill" href="LOGO_VERTICAL/0.25x/universidata_logo_vertical_color_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_VERTICAL/0.5x/universidata_logo_vertical_color_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_VERTICAL/1x/universidata_logo_vertical_color_white_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_VERTICAL/2x/universidata_logo_vertical_color_white_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_VERTICAL/4x/universidata_logo_vertical_color_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical · Mono · Light -->
+      <div class="card card--light">
+        <div class="card__preview">
+          <img src="LOGO_VERTICAL/1x/universidata_logo_vertical_mono_black_1x.png" alt="Logo Vertical — Mono, Light background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Light background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_VERTICAL/SVG/universidata_logo_vertical_mono_black.svg" download>SVG</a>
+            <a class="pill" href="LOGO_VERTICAL/0.25x/universidata_logo_vertical_mono_black_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_VERTICAL/0.5x/universidata_logo_vertical_mono_black_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_VERTICAL/1x/universidata_logo_vertical_mono_black_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_VERTICAL/2x/universidata_logo_vertical_mono_black_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_VERTICAL/4x/universidata_logo_vertical_mono_black_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical · Mono · Dark -->
+      <div class="card card--dark">
+        <div class="card__preview">
+          <img src="LOGO_VERTICAL/1x/universidata_logo_vertical_mono_white_1x.png" alt="Logo Vertical — Mono, Dark background">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Mono · Dark background</span>
+          <div class="pills">
+            <a class="pill pill--svg" href="LOGO_VERTICAL/SVG/universidata_logo_vertical_mono_white.svg" download>SVG</a>
+            <a class="pill" href="LOGO_VERTICAL/0.25x/universidata_logo_vertical_mono_white_0.25x.png" download>0.25×</a>
+            <a class="pill" href="LOGO_VERTICAL/0.5x/universidata_logo_vertical_mono_white_0.5x.png" download>0.5×</a>
+            <a class="pill" href="LOGO_VERTICAL/1x/universidata_logo_vertical_mono_white_1x.png" download>1×</a>
+            <a class="pill" href="LOGO_VERTICAL/2x/universidata_logo_vertical_mono_white_2x.png" download>2×</a>
+            <a class="pill" href="LOGO_VERTICAL/4x/universidata_logo_vertical_mono_white_4x.png" download>4×</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Universidata &mdash; Brand Assets &mdash; For internal use
+  </footer>
+
+</div>
+</body>
+</html>

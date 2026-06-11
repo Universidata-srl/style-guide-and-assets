@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universidata — Brand Asset Kit</title>
+  <title>UD Brand Asset Kit</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,13 +41,54 @@
 
     /* ── Header ── */
     header {
-      padding: 64px 0 48px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 72px;
+      padding: 64px 0 28px;
       display: flex;
       align-items: baseline;
       gap: 20px;
     }
+
+    /* ── Tabs ── */
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      padding: 16px 0;
+      margin-bottom: 56px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .tab:hover {
+      color: var(--ink);
+      border-color: var(--muted);
+    }
+
+    .tab.is-active {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+    }
+
+    /* ── Tab panels ── */
+    .panel { display: none; }
+    .panel.is-active { display: block; }
 
     .header__brand {
       font-family: var(--font-serif);
@@ -233,6 +274,45 @@
       border-color: #FFFFFF;
     }
 
+    /* ── Document template preview ── */
+    .card--light .card__preview--doc {
+      background: var(--bg);
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .doc-icon {
+      color: var(--muted);
+    }
+
+    .doc-name {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    /* ── Button ── */
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--ink);
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 96px;
@@ -252,6 +332,14 @@
     <div class="header__divider"></div>
     <span class="header__subtitle">Brand Asset Kit</span>
   </header>
+
+  <nav class="tabs" role="tablist" aria-label="Asset categories">
+    <button class="tab is-active" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="true" data-target="assets">Brand Assets</button>
+    <button class="tab" role="tab" id="tab-templates" aria-controls="panel-templates" aria-selected="false" data-target="templates">Templates</button>
+  </nav>
+
+  <!-- ════════ BRAND ASSETS ════════ -->
+  <div class="panel is-active" id="panel-assets" role="tabpanel" aria-labelledby="tab-assets">
 
   <!-- ══ SYMBOL ══ -->
   <section class="section">
@@ -502,10 +590,81 @@
     </div>
   </section>
 
+  </div><!-- /panel-assets -->
+
+  <!-- ════════ TEMPLATES ════════ -->
+  <div class="panel" id="panel-templates" role="tabpanel" aria-labelledby="tab-templates" hidden>
+
+  <!-- ══ DOCUMENT TEMPLATES ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Document Templates</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="grid">
+
+      <!-- Letterhead -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--doc">
+          <svg class="doc-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 3v5h5"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="13" y2="17"/>
+          </svg>
+          <span class="doc-name">Letterhead</span>
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Google Docs · Opens your own editable copy</span>
+          <a class="btn" href="https://docs.google.com/document/d/1BKOx3Uvk8MWTqDeFkRo3Emt3er-pqzfZZ5nv4KPKDXo/copy" target="_blank" rel="noopener">Make a copy ↗</a>
+        </div>
+      </div>
+
+      <!-- Invoice -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--doc">
+          <svg class="doc-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 3v5h5"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="13" y2="17"/>
+          </svg>
+          <span class="doc-name">Invoice</span>
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Google Docs · Opens your own editable copy</span>
+          <a class="btn" href="https://docs.google.com/document/d/1rBzsoswOtEfHFV32mT4jTUi3UADaEgVuhYTuG96nn4s/copy" target="_blank" rel="noopener">Make a copy ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div><!-- /panel-templates -->
+
   <footer>
     Universidata &mdash; Brand Assets &mdash; For internal use
   </footer>
 
 </div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.dataset.target;
+      document.querySelectorAll('.tab').forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      document.querySelectorAll('.panel').forEach(function (p) {
+        var on = p.id === 'panel-' + target;
+        p.classList.toggle('is-active', on);
+        if (on) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
+      });
+      window.scrollTo({ top: 0 });
+    });
+  });
+</script>
 </body>
 </html>

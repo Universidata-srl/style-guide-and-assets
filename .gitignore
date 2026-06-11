@@ -4,6 +4,9 @@
 # Spec/internal docs
 docs/
 
+# Misc placeholders
+MISC/
+
 # OS clutter
 .DS_Store
 Thumbs.db

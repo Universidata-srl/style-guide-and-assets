@@ -4,11 +4,13 @@
 
 ---
 
-Universidata — Style Guide & Assets is the central repository for all official brand assets. It includes the full logo system across three formats (symbol, horizontal, vertical), available in color and mono variants, for both light and dark backgrounds, in multiple resolutions and SVG.
+Universidata — Style Guide & Assets is the central repository for all official brand assets. It includes the full logo system across three formats (symbol, horizontal, vertical), available in color and mono variants, for both light and dark backgrounds, in multiple resolutions and SVG. It also provides shared document templates (letterhead, invoice) you can copy and work on.
 
-Use the interactive brand kit to preview every variant and download the right file for your use case.
+Use the interactive brand kit to preview every logo variant, download the right file for your use case, and grab a fresh copy of a document template.
 
 **→ [Open Brand Kit](https://universidata-srl.github.io/style-guide-and-assets/)**
+
+The kit is organised into two tabs: **Brand Assets** (logos) and **Templates** (Google Docs). Template buttons open a "Make a copy" dialog so each person gets their own editable copy — the master is never touched.
 
 ---
 

@@ -10,7 +10,7 @@ Use the interactive brand kit to preview every logo variant, download the right 
 
 **→ [Open Brand Kit](https://universidata-srl.github.io/style-guide-and-assets/)**
 
-The kit is organised into two tabs: **Brand Assets** (logos) and **Templates** (Google Docs). Template buttons open a "Make a copy" dialog so each person gets their own editable copy — the master is never touched.
+The kit is organised into three tabs: **Brand Assets** (logos), **Templates** (Google Docs), and **Wallpapers** (branded desktop backgrounds). Template buttons open a "Make a copy" dialog so each person gets their own editable copy — the master is never touched. Wallpaper previews are lightweight; the download buttons serve the full-resolution PNGs from the repo.
 
 ---
 

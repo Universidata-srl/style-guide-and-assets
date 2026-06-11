@@ -313,6 +313,19 @@
       color: var(--ink);
     }
 
+    /* ── Wallpaper preview ── */
+    .card__preview--wall {
+      height: 240px;
+      padding: 16px;
+      background: var(--dark);
+    }
+
+    .card__preview--wall img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 96px;
@@ -336,6 +349,7 @@
   <nav class="tabs" role="tablist" aria-label="Asset categories">
     <button class="tab is-active" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="true" data-target="assets">Brand Assets</button>
     <button class="tab" role="tab" id="tab-templates" aria-controls="panel-templates" aria-selected="false" data-target="templates">Templates</button>
+    <button class="tab" role="tab" id="tab-wallpapers" aria-controls="panel-wallpapers" aria-selected="false" data-target="wallpapers">Wallpapers</button>
   </nav>
 
   <!-- ════════ BRAND ASSETS ════════ -->
@@ -641,6 +655,88 @@
   </section>
 
   </div><!-- /panel-templates -->
+
+  <!-- ════════ WALLPAPERS ════════ -->
+  <div class="panel" id="panel-wallpapers" role="tabpanel" aria-labelledby="tab-wallpapers" hidden>
+
+  <!-- ══ WALLPAPERS ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Wallpapers</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="grid">
+
+      <!-- Column Passage -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Column_Passage.jpg" alt="Wallpaper — Column Passage" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Column Passage · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Column_Passage.png" download>Download ↓</a>
+        </div>
+      </div>
+
+      <!-- Column Passage II -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Column_Passage_2.jpg" alt="Wallpaper — Column Passage II" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Column Passage II · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Column_Passage_2.png" download>Download ↓</a>
+        </div>
+      </div>
+
+      <!-- Dome -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Dome.jpg" alt="Wallpaper — Dome" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Dome · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Dome.png" download>Download ↓</a>
+        </div>
+      </div>
+
+      <!-- Element · Column -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Elem_Column.jpg" alt="Wallpaper — Element, Column" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Element · Column · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Elem_Column.png" download>Download ↓</a>
+        </div>
+      </div>
+
+      <!-- Element · Cube -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Elem_Cube.jpg" alt="Wallpaper — Element, Cube" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Element · Cube · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Elem_Cube.png" download>Download ↓</a>
+        </div>
+      </div>
+
+      <!-- Element · Singularity -->
+      <div class="card card--light">
+        <div class="card__preview card__preview--wall">
+          <img src="WALLPAPERS/previews/UD_Elem_Singularity.jpg" alt="Wallpaper — Element, Singularity" loading="lazy">
+        </div>
+        <div class="card__meta">
+          <span class="card__label">Element · Singularity · PNG</span>
+          <a class="btn" href="WALLPAPERS/UD_Elem_Singularity.png" download>Download ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div><!-- /panel-wallpapers -->
 
   <footer>
     Universidata &mdash; Brand Assets &mdash; For internal use

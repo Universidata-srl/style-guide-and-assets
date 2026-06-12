@@ -10,7 +10,9 @@ Use the interactive brand kit to preview every logo variant, download the right 
 
 **→ [Open Brand Kit](https://universidata-srl.github.io/style-guide-and-assets/)**
 
-The kit is organised into three tabs: **Brand Assets** (logos), **Templates** (Google Docs), and **Wallpapers** (branded desktop backgrounds). Template buttons open a "Make a copy" dialog so each person gets their own editable copy — the master is never touched. Wallpaper previews are lightweight; the download buttons serve the full-resolution PNGs from the repo.
+The kit is organised into four tabs: **Brand Assets** (logos), **Templates** (Google Docs), **Wallpapers** (branded desktop backgrounds), and **Fonts** (the brand typefaces). Template buttons open a "Make a copy" dialog so each person gets their own editable copy — the master is never touched. Wallpaper previews are lightweight; the download buttons serve the full-resolution PNGs from the repo. The Fonts tab shows live specimens and offers each family as a `.zip` download.
+
+The brand typefaces — **Barlow** (sans-serif) and **Playfair Display** (serif), both open-source under the OFL — are also applied to the kit page itself.
 
 ---
 

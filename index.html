@@ -17,9 +17,9 @@
       --pill-bg:   #ECEAE4;
       --pill-ink:  #0A0A0A;
       --radius:    6px;
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --font-sans: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       --font-mono: "SF Mono", "Fira Mono", "Consolas", "Menlo", monospace;
-      --font-serif: Georgia, "Times New Roman", serif;
+      --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
     }
 
     html { font-size: 16px; }
@@ -326,6 +326,113 @@
       object-fit: contain;
     }
 
+    /* ── Font specimens ── */
+    @font-face {
+      font-family: "Barlow";
+      src: url("FONTS/Barlow/Barlow/Barlow-Regular.ttf") format("truetype");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Barlow";
+      src: url("FONTS/Barlow/Barlow/Barlow-Medium.ttf") format("truetype");
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Barlow";
+      src: url("FONTS/Barlow/Barlow/Barlow-SemiBold.ttf") format("truetype");
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Barlow";
+      src: url("FONTS/Barlow/Barlow/Barlow-Bold.ttf") format("truetype");
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Playfair Display";
+      src: url("FONTS/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Playfair Display";
+      src: url("FONTS/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("truetype");
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+
+    .fonts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .font-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .font-specimen {
+      padding: 40px 32px 34px;
+    }
+
+    .font-display {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .font-pangram {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    .font-glyphs {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--muted);
+      word-spacing: 3px;
+    }
+
+    .font-card--barlow .font-specimen { font-family: "Barlow", var(--font-sans); }
+    .font-card--playfair .font-specimen { font-family: "Playfair Display", var(--font-serif); }
+
+    .font-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px 24px;
+      flex-wrap: wrap;
+      padding: 18px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .font-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-right: 14px;
+    }
+
+    .font-tags {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .font-display { font-size: 2.75rem; }
+      .font-pangram { font-size: 1.25rem; }
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 96px;
@@ -350,6 +457,7 @@
     <button class="tab is-active" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="true" data-target="assets">Brand Assets</button>
     <button class="tab" role="tab" id="tab-templates" aria-controls="panel-templates" aria-selected="false" data-target="templates">Templates</button>
     <button class="tab" role="tab" id="tab-wallpapers" aria-controls="panel-wallpapers" aria-selected="false" data-target="wallpapers">Wallpapers</button>
+    <button class="tab" role="tab" id="tab-fonts" aria-controls="panel-fonts" aria-selected="false" data-target="fonts">Fonts</button>
   </nav>
 
   <!-- ════════ BRAND ASSETS ════════ -->
@@ -737,6 +845,54 @@
   </section>
 
   </div><!-- /panel-wallpapers -->
+
+  <!-- ════════ FONTS ════════ -->
+  <div class="panel" id="panel-fonts" role="tabpanel" aria-labelledby="tab-fonts" hidden>
+
+  <!-- ══ FONTS ══ -->
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Fonts</h2>
+      <div class="section__line"></div>
+    </div>
+    <div class="fonts">
+
+      <!-- Barlow -->
+      <div class="font-card font-card--barlow">
+        <div class="font-specimen">
+          <div class="font-display">Barlow</div>
+          <div class="font-pangram">The quick brown fox jumps over the lazy dog</div>
+          <div class="font-glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+        </div>
+        <div class="font-meta">
+          <div>
+            <span class="font-title">Barlow</span>
+            <span class="font-tags">Sans-serif · 18 styles · OFL (free)</span>
+          </div>
+          <a class="btn" href="FONTS/Barlow.zip" download>Download .zip ↓</a>
+        </div>
+      </div>
+
+      <!-- Playfair Display -->
+      <div class="font-card font-card--playfair">
+        <div class="font-specimen">
+          <div class="font-display">Playfair Display</div>
+          <div class="font-pangram">The quick brown fox jumps over the lazy dog</div>
+          <div class="font-glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+        </div>
+        <div class="font-meta">
+          <div>
+            <span class="font-title">Playfair Display</span>
+            <span class="font-tags">Serif · Variable + 12 styles · OFL (free)</span>
+          </div>
+          <a class="btn" href="FONTS/PlayfairDisplay.zip" download>Download .zip ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div><!-- /panel-fonts -->
 
   <footer>
     Universidata &mdash; Brand Assets &mdash; For internal use

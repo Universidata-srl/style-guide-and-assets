@@ -7,6 +7,13 @@ docs/
 # Misc placeholders
 MISC/
 
+# Local dev tooling (preview server config)
+.claude/
+
+# Build tooling / dependencies (never committed; built outside the repo)
+node_modules/
+_build_tmp/
+
 # OS clutter
 .DS_Store
 Thumbs.db

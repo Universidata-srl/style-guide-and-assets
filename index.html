@@ -53,6 +53,7 @@
       top: 0;
       z-index: 10;
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       padding: 16px 0;
       margin-bottom: 56px;
@@ -637,6 +638,18 @@
     }
 
     .bs-table td { background: var(--surface); }
+
+    /* Horizontal scroll container so wide tables never overflow the page on mobile */
+    .bs-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 0 0 24px;
+    }
+
+    .bs-table-wrap .bs-table {
+      margin: 0;
+      min-width: 540px;
+    }
 
     /* ── Tag badges (FATTO / VETTORE / DA ESPLORARE) ── */
     .tag {
@@ -1342,6 +1355,7 @@ Ingenium Education Group — gruppo / partner-investitore / laboratorio sul camp
         <li><em>Proof points:</em> reasons-to-believe Sezione C.</li>
       </ul>
       <p><strong>Pay-off per pubblico — "Più X, meno Y"</strong> <em>(asset validato col Ministero)</em>:</p>
+      <div class="bs-table-wrap">
       <table class="bs-table">
         <thead>
           <tr><th>Pubblico</th><th>Pay-off</th></tr>
@@ -1355,6 +1369,7 @@ Ingenium Education Group — gruppo / partner-investitore / laboratorio sul camp
           <tr><td>Gruppi di scuole</td><td>Più coordinamento, meno dispersione.</td></tr>
         </tbody>
       </table>
+      </div>
       <p><strong>AI nella comunicazione:</strong> esiti in lingua-scuola; col tecnico/curioso se ne parla con orgoglio; mai "AI-powered"; sempre "propone, tu decidi"; i workshop/formazione sono il canale dove si smonta la paura.</p>
 
       <!-- E -->
@@ -1363,6 +1378,7 @@ Ingenium Education Group — gruppo / partner-investitore / laboratorio sul camp
       <p>Contesto: <strong>3 scuole in pilot da settembre 2026</strong>. Nessun dato attuale → E imposta gli <strong>obiettivi</strong> e la strumentazione, non misura il presente. Cadenza: <em>baseline a settembre → check a 3 mesi (dic 2026) → 6 mesi (mar 2027) → review fine anno (giu 2027).</em></p>
 
       <h4>E.1 · Metriche-obiettivo (ogni metrica = prova di una promessa)</h4>
+      <div class="bs-table-wrap">
       <table class="bs-table">
         <thead>
           <tr><th>Promessa (da A–D)</th><th>Metrica</th><th>Come si misura</th><th>Target proposto <em>(da validare)</em></th></tr>
@@ -1377,6 +1393,7 @@ Ingenium Education Group — gruppo / partner-investitore / laboratorio sul camp
           <tr><td>Inclusività (Course Studio)</td><td>n. verifiche/materiali differenziati per chi fa più fatica</td><td>analytics prodotto</td><td>uso reale della differenziazione</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h4>E.2 · Il pilot è il motore del brand</h4>
       <p>Le 3 scuole sono insieme: <strong>test</strong>, <strong>laboratorio sul campo</strong> (il fossato "nati sul campo") e <strong>fonte delle prove</strong> di vendita (Sezione C). <em>Obiettivo-brand del pilot:</em> uscirne con <strong>3 case study</strong>, <strong>≥2 referenze chiamabili</strong> e i <strong>primi numeri reali</strong> da mettere in copy ("già in uso in 3 scuole, −X ore a settimana").</p>

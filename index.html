@@ -433,6 +433,230 @@
       .font-pangram { font-size: 1.25rem; }
     }
 
+    /* ── Brand Strategy ── */
+    .bs-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .bs-toc {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .bs-toc__title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .bs-toc ol {
+      list-style: none;
+      counter-reset: bs-toc;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 40px;
+    }
+
+    @media (max-width: 640px) {
+      .bs-toc ol { grid-template-columns: 1fr; }
+    }
+
+    .bs-toc > ol > li {
+      counter-increment: bs-toc;
+      padding: 6px 0;
+    }
+
+    .bs-toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      transition: color 0.15s;
+    }
+
+    .bs-toc a:hover { color: var(--muted); }
+
+    .bs-toc ul {
+      list-style: none;
+      margin: 4px 0 0;
+      padding: 0 0 0 2px;
+    }
+
+    .bs-toc ul a {
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .bs-toc ul a:hover { color: var(--ink); }
+
+    .bs-toc ul li { padding: 2px 0; }
+
+    .bs-content {
+      max-width: 760px;
+    }
+
+    .bs-content h3.bs-h {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 64px 0 8px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 90px;
+    }
+
+    .bs-content h3.bs-h:first-child {
+      margin-top: 8px;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .bs-content .bs-lock {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .bs-content h4 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 34px 0 12px;
+    }
+
+    .bs-content h5 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 26px 0 10px;
+    }
+
+    .bs-content p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--ink);
+      margin: 0 0 14px;
+    }
+
+    .bs-content ul, .bs-content ol {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
+
+    .bs-content li {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--ink);
+      margin-bottom: 7px;
+    }
+
+    .bs-content li ul, .bs-content li ol {
+      margin: 7px 0 4px;
+    }
+
+    .bs-content strong { font-weight: 700; }
+
+    .bs-content em { font-style: italic; }
+
+    .bs-content a.bs-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .bs-quote {
+      border-left: 3px solid var(--border);
+      padding: 4px 0 4px 20px;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .bs-callout {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 18px 22px;
+      margin: 0 0 22px;
+    }
+
+    .bs-callout p:last-child { margin-bottom: 0; }
+
+    .bs-arch {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      background: var(--dark);
+      color: #E8E7E2;
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin: 0 0 22px;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .bs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 24px;
+      font-size: 0.875rem;
+    }
+
+    .bs-table th, .bs-table td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .bs-table th {
+      background: var(--pill-bg);
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .bs-table td { background: var(--surface); }
+
+    /* ── Tag badges (FATTO / VETTORE / DA ESPLORARE) ── */
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      border: 1px solid transparent;
+    }
+
+    .tag--fatto    { background: #E4ECE4; color: #2F5D34; border-color: #CFE0CF; }
+    .tag--vettore  { background: #E5E9F2; color: #2F4470; border-color: #D2DAEC; }
+    .tag--esplora  { background: #F2EBDE; color: #6B5526; border-color: #E8DDC6; }
+    .tag--locked   { background: var(--pill-bg); color: var(--muted); border-color: var(--border); }
+
     /* ── Footer ── */
     footer {
       margin-top: 96px;
@@ -458,6 +682,7 @@
     <button class="tab" role="tab" id="tab-templates" aria-controls="panel-templates" aria-selected="false" data-target="templates">Templates</button>
     <button class="tab" role="tab" id="tab-wallpapers" aria-controls="panel-wallpapers" aria-selected="false" data-target="wallpapers">Wallpapers</button>
     <button class="tab" role="tab" id="tab-fonts" aria-controls="panel-fonts" aria-selected="false" data-target="fonts">Fonts</button>
+    <button class="tab" role="tab" id="tab-strategy" aria-controls="panel-strategy" aria-selected="false" data-target="strategy">Brand Strategy</button>
   </nav>
 
   <!-- ════════ BRAND ASSETS ════════ -->
@@ -893,6 +1118,317 @@
   </section>
 
   </div><!-- /panel-fonts -->
+
+  <!-- ════════ BRAND STRATEGY ════════ -->
+  <div class="panel" id="panel-strategy" role="tabpanel" aria-labelledby="tab-strategy" hidden>
+
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Brand Strategy</h2>
+      <div class="section__line"></div>
+    </div>
+
+    <!-- Action buttons (Google Doc) -->
+    <div class="bs-actions">
+      <a class="btn" href="https://docs.google.com/document/d/1rwxrEU2aMIiTEOdqrd9LtXt9skJ3ibJ2LNCa3JrrCm4/copy" target="_blank" rel="noopener">✏️ Modifica (Make a copy) ↗</a>
+      <a class="btn" href="https://docs.google.com/document/d/1rwxrEU2aMIiTEOdqrd9LtXt9skJ3ibJ2LNCa3JrrCm4/export?format=docx" target="_blank" rel="noopener">⬇️ Scarica DOCX</a>
+      <a class="btn" href="https://docs.google.com/document/d/1rwxrEU2aMIiTEOdqrd9LtXt9skJ3ibJ2LNCa3JrrCm4/export?format=pdf" target="_blank" rel="noopener">⬇️ Scarica PDF</a>
+    </div>
+
+    <!-- Table of contents -->
+    <nav class="bs-toc" aria-label="Indice Brand Strategy">
+      <div class="bs-toc__title">Indice</div>
+      <ol>
+        <li>
+          <a href="#bs-a">A · Fondamenta</a>
+          <ul>
+            <li><a href="#bs-a">A1 Purpose · A2 Vision · A3 Mission</a></li>
+            <li><a href="#bs-a">A4 Valori · Scintilla</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#bs-b">B · Contesto</a>
+          <ul>
+            <li><a href="#bs-b">B1 Personas · B2 Due motion</a></li>
+            <li><a href="#bs-b">B3 Pain/JTBD · B4 Concorrenza</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#bs-c">C · Cuore strategico</a>
+          <ul>
+            <li><a href="#bs-c">Onlyness · Posizionamenti</a></li>
+            <li><a href="#bs-c">Copy · Reasons-to-believe</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#bs-d">D · Espressione</a>
+          <ul>
+            <li><a href="#bs-d">Archetipi · Tono di voce</a></li>
+            <li><a href="#bs-d">Messaging · Pay-off</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#bs-e">E · Governo</a>
+          <ul>
+            <li><a href="#bs-e">E.1 Metriche · E.2 Pilot</a></li>
+            <li><a href="#bs-e">E.3–E.5 Disciplina e passi</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#bs-intro">Decisioni bloccate &amp; Architettura</a>
+          <ul>
+            <li><a href="#bs-intro">Asse strategico · Brand architecture</a></li>
+            <li><a href="#bs-appendix">Libreria asset · Conflitti risolti</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="bs-content">
+
+      <!-- Intro -->
+      <h3 class="bs-h" id="bs-intro">Premessa &amp; decisioni bloccate</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Documento di lavoro</span> Struttura A→E · ground truth dal fondatore</span>
+      <p class="bs-quote">Disciplina centrale: ogni affermazione è etichettata <span class="tag tag--fatto">Fatto</span> (vero, dimostrabile) · <span class="tag tag--vettore">Vettore</span> (direzione/visione scelta) · <span class="tag tag--esplora">Da esplorare</span> (aperto). <em>I fatti portano il peso, il vettore dà il senso.</em></p>
+
+      <h4>Decisioni bloccate (asse strategico)</h4>
+      <ol>
+        <li><strong>Cuore tech-led, formazione sullo sfondo.</strong> UniversiData è una <em>tech company per la scuola</em>, non un ente di formazione.</li>
+        <li><strong>Prodotto concreto + una punta di filosofia.</strong> Niente missione civile da SpaceX; ambizione ancorata al valore di prodotto.</li>
+        <li><strong>AI anti-buzzword, per ragione go-to-market.</strong> La scuola italiana teme l'AI come problema non gestibile → la portiamo in casa "senza fare rumore", parlando di esiti e sollievo. <em>Dentro fieramente tech, fuori lingua del sollievo.</em></li>
+        <li><strong>Architettura confermata</strong> (sotto).</li>
+      </ol>
+
+      <h4>Brand architecture</h4>
+      <div class="bs-arch">UniversiData — azienda, brand tech-led
+├─ EDTECH (area core, protagonista)
+│   ├─ empowerEd — suite prodotti per le scuole
+│   │     ├─ Learning Platform (LMS)
+│   │     └─ School Manager (gestionale scolastico)
+│   ├─ R&amp;D (sotto EdTech)
+│   │     ├─ Avatar for Edu
+│   │     └─ Gaming for Edu
+│   └─ Formazione per le scuole (strato di adozione)
+└─ CORPORATE ACADEMY — formazione B2B aziende (sfondo: cassa + esplorazione)
+
+Ingenium Education Group — gruppo / partner-investitore / laboratorio sul campo</div>
+      <p><span class="tag tag--esplora">Da esplorare</span> Avatar/Gaming: a maturità entrano in empowerEd o restano linea separata?</p>
+
+      <!-- A -->
+      <h3 class="bs-h" id="bs-a">A · Fondamenta</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Locked</span> salvo nome del 4° valore</span>
+
+      <h4>A1 · Purpose</h4>
+      <p>Due versioni ufficiali:</p>
+      <ul>
+        <li><em>Versione breve (verbo-chiave "alleggerire"):</em> "Costruiamo le tecnologie che <strong>alleggeriscono</strong> la scuola, per tutti quelli che la vivono." <span class="tag tag--vettore">Vettore</span></li>
+        <li><em>Versione estesa:</em> "Costruiamo le tecnologie che <strong>liberano la scuola dalla fatica inutile, perché possa pensare al futuro dei propri studenti</strong>." <span class="tag tag--vettore">Vettore</span></li>
+      </ul>
+
+      <h4>A2 · Vision <span class="tag tag--vettore">Vettore</span></h4>
+      <p>"Una scuola dove <strong>amministrare e prendersi cura degli studenti — e del loro futuro — è più semplice</strong>, grazie a tecnologie costruite <strong>da dentro le scuole</strong>."</p>
+
+      <h4>A3 · Mission</h4>
+      <p>"Costruiamo tecnologie <strong>insieme alle scuole</strong>, per migliorare la vita di <strong>chi la fa e di chi la vive</strong>."</p>
+
+      <h4>A4 · Valori (set a 4)</h4>
+      <ol>
+        <li><strong>Human-led technology</strong> — l'umano guida, la macchina serve.</li>
+        <li><strong>Nati sul campo</strong> — costruiamo dentro le scuole, sui loro problemi veri.</li>
+        <li><strong>Tecnologia che alleggerisce</strong> — metro unico: toglie peso o lo aggiunge?</li>
+        <li><strong>Adozione, non installazione</strong> <em>(nome provvisorio, da rivedere)</em> — non consegniamo lo strumento e via, accompagniamo le persone all'uso reale. La formazione resta in UniversiData come accompagnamento all'adozione, con focus sulle scuole. <em>(candidati: Tecnologia che attecchisce · Fino all'uso vero · Portiamo non consegniamo · Conta solo se la usano)</em></li>
+      </ol>
+
+      <h4>Scintilla (atto fondativo) <span class="tag tag--fatto">Fatto</span></h4>
+      <p>Cristina (voleva insegnare matematica → CEO) + Silviu (bocciato a 16 anni, ricostruisce da zero il registro elettronico). Asset narrativo forte, da tenere.</p>
+
+      <!-- B -->
+      <h3 class="bs-h" id="bs-b">B · Contesto</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Locked</span> B4 in ricerca</span>
+
+      <h4>B1 · Personas</h4>
+      <p>Adottiamo le 6 personas del vecchio doc (Beatrice/dirigente, Roberto/docente, Antonella/segreteria, Giulia/genitore, Sofia/studente, Paolo/gruppo), <strong>adattate alle scuole private internazionali in Italia</strong> (nomi e ruoli anche internazionali: Head/Principal, Bursar, Coordinator…).</p>
+
+      <h4>B2 · Due motion / due buyer <span class="tag tag--fatto">Fatto</span></h4>
+      <ul>
+        <li><strong>School Manager (gestionale)</strong> → <em>top-down</em>: compra l'<strong>amministratore scolastico / dirigente</strong>. Messaggio: controllo, sollievo, ordine, compliance.</li>
+        <li><strong>Learning Platform (LMS)</strong> → <em>bottom-up, teacher-led</em>: target il <strong>docente</strong>; se soddisfatto, spinge il prodotto a scuola e colleghi. Messaggio: entusiasmo e facilità per chi insegna.</li>
+        <li><em>Implicazione → Sezione C:</em> due posizionamenti distinti sotto un cappello solo.</li>
+      </ul>
+
+      <h4>B3 · Pain / Jobs-to-be-Done <span class="tag tag--fatto">Fatto</span></h4>
+      <ul>
+        <li>troppi strumenti che non comunicano tra loro (frammentazione);</li>
+        <li>affaticamento tecnologico di tutto il personale;</li>
+        <li>indisposizione al cambiamento perché troppo complicato;</li>
+        <li><strong>adoption gap</strong>: anche con strumenti a disposizione, i docenti non li usano efficacemente né con mente aperta → <em>valida il valore #4 (accompagnamento) e la formazione-per-scuole.</em></li>
+      </ul>
+
+      <h4>B4 · Concorrenza <span class="tag tag--fatto">Fatto</span></h4>
+      <p><em>(dettaglio in <code>Ricerca-Concorrenti-EdTech.md</code>)</em></p>
+      <ul>
+        <li><em>SIS Italia (oligopolio nazionale):</em> Argo (leader ~80%), Spaggiari/ClasseViva, Nuvola/Madisoft, Axios, MasterCom — tarati su statali/paritarie + normativa MIM, <strong>nessuno per scuole internazionali</strong>.</li>
+        <li><em>LMS Italia:</em> Google Classroom + Microsoft Teams (gratuiti, dominanti), Moodle, WeSchool.</li>
+        <li><em>SIS internazionali (concorrenti diretti):</em> iSAMS, Veracross, PowerSchool, ManageBac, Toddle (Europa: Arbor, SIMS, Bromcom, Untis).</li>
+        <li><em>LMS internazionali:</em> Canvas, ManageBac, Toddle, Firefly, Schoology, itslearning.</li>
+      </ul>
+      <div class="bs-callout">
+        <p><strong>WHITE SPACE:</strong> nessuno unisce <em>conformità + supporto italiani</em> con <em>multi-curriculum internazionale (IB/Cambridge)</em> in <strong>un'unica piattaforma SIS+LMS</strong> a prezzo trasparente. Le ~83–103 scuole internazionali in Italia (Milano/Roma) usano stack esteri non localizzati. <strong>→ è il posizionamento di UniversiData.</strong></p>
+      </div>
+      <p><em>Nota motion LMS:</em> il Learning Platform compete contro <strong>incumbent gratuiti</strong> (Google Classroom/Teams) → per vincere teacher-led serve fare ciò che il gratis non può (esperienze AI: Gaming/Avatar). I prodotti R&amp;D sono l'arma competitiva del LMS, non un esperimento laterale.</p>
+
+      <!-- C -->
+      <h3 class="bs-h" id="bs-c">C · Cuore strategico</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Locked</span> validato con persona-test Dirigente + Docente</span>
+
+      <div class="bs-callout">
+        <p><strong>Onlyness (fossato):</strong> UniversiData è l'unico EdTech i cui prodotti <strong>nascono dentro vere scuole internazionali</strong> — costruiti sul campo, non immaginati da fuori.</p>
+      </div>
+
+      <h4>Posizionamenti (uno per motion)</h4>
+      <ul>
+        <li><strong>School Manager — gestionale, al dirigente:</strong> "Per le scuole soffocate da sistemi che non si parlano, mette gestione, didattica e famiglie in un posto solo: processi chiari, dati che non si perdono, uno strumento che il personale adotta perché nato sui loro problemi di oggi. A differenza dei gestionali datati e calati dall'alto, nasce dentro le scuole." → <em>serve scuole pubbliche E private (non solo internazionali); ambizione: catalogare/integrare i sistemi privati esistenti.</em></li>
+        <li><strong>Course Studio / Learning Platform — LMS, al docente:</strong> "Per i docenti che buttano le serate su materiali, test e correzioni, digitalizza il corso che già hanno e fa il lavoro noioso al posto loro — comprese le verifiche differenziate per chi fa più fatica. Resta il docente a insegnare e a decidere: lo strumento propone, non sostituisce." → <em>Course Studio = prima fase dell'LMS (emped.eu).</em></li>
+      </ul>
+
+      <h4>Righe calde da copy</h4>
+      <ul>
+        <li><em>Ombrello:</em> Le tecnologie nate dentro la scuola, per ridarle tempo e ordine.</li>
+        <li><em>Al dirigente:</em> Tutta la tua scuola in un posto solo: processi chiari, dati che non si perdono. Più tempo per guidare, meno per rincorrere i sistemi.</li>
+        <li><em>Al docente:</em> Le tue verifiche e i tuoi materiali pronti in una frazione del tempo — comprese le versioni per chi fa più fatica. Il lavoro noioso lo fa lo strumento; cosa insegnare e come valutare resta a te. Meno serate, più classe.</li>
+      </ul>
+
+      <h4>Reasons-to-believe da costruire/mostrare <em>(emersi dal persona-test)</em></h4>
+      <ul>
+        <li>Scuole simili che già usano + referente chiamabile.</li>
+        <li>Integrazioni reali (SIDI, registro elettronico, fatturazione) + migrazione dati storici — sciogliere l'ansia "devo buttare ciò che ho".</li>
+        <li>Dopo la firma: referente, tempi di risposta, messa a regime in giorni reali, prezzo trasparente.</li>
+        <li>Privacy dati studenti (GDPR, dati in UE — già nel deck).</li>
+        <li>Garanzia Human-led: valutazioni e didattica restano al docente; l'AI propone.</li>
+      </ul>
+      <p><strong>Ponte passato→presente:</strong> insegnavamo i dati (B2B) → costruiamo con i dati (edtech).</p>
+      <p><strong>Cautele di copy (dal persona-test) — da evitare:</strong> "liberare/liberarla" (markettaro) · "coinvolgente" (da brochure) · "libro digitale vivo" (fuffa) · ripetere "si usa davvero" · vendere "presto un assistente" (suona "non c'è" + paura sostituzione) · qualsiasi gergo di mercato nella copy.</p>
+
+      <!-- D -->
+      <h3 class="bs-h" id="bs-d">D · Espressione</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Locked</span> fuse deck + vecchio doc + persona-test, in chiave tech-led</span>
+
+      <h5>Archetipi</h5>
+      <ul>
+        <li><strong>Primario: il Custode</strong> — cura, sollievo, affidabilità, presenza. È la <em>relazione</em> che il pubblico sente; differenzia dai competitor (quasi tutti Sovrano/Eroe).</li>
+        <li><strong>Secondario: il Creatore</strong> — costruiamo, sul campo (la scintilla: Silviu che ricostruisce il registro). È il motore tech-led.</li>
+        <li><em>Cambio vs vecchio doc:</em> da <strong>Saggio+Custode</strong> a <strong>Custode+Creatore</strong>. Il Saggio (chiarezza, dati→decisioni) resta come <em>tratto</em> della voce, non come archetipo.</li>
+      </ul>
+
+      <h5>Tono di voce</h5>
+      <p class="bs-quote"><strong>In una frase:</strong> Un collega esperto che costruisce con te e ti toglie un peso: caldo, concreto, mai dall'alto. Dice poco e dice vero, e lascia sempre l'ultima parola a te.</p>
+      <p><strong>I 6 principi:</strong></p>
+      <ol>
+        <li><strong>Caldi prima che intelligenti.</strong> ✅ "Sappiamo quanto pesa la fine del trimestre." ❌ "Ottimizziamo i workflow."</li>
+        <li><strong>Concreti, mai vaghi.</strong> Numeri &gt; aggettivi. ✅ "Una segreteria, un posto solo. Basta dieci Excel." ❌ "Soluzione innovativa per la digitalizzazione."</li>
+        <li><strong>Tu resti alla guida.</strong> La tecnologia propone, l'umano decide. ✅ "Le verifiche le prepara lo strumento, le decidi tu." ❌ "L'AI valuta i tuoi studenti."</li>
+        <li><strong>Mostriamo, non promettiamo.</strong> Prove, nomi, demo, numeri. ✅ "Già in uso in N scuole come la tua." ❌ "Lo strumento che si usa davvero."</li>
+        <li><strong>La tecnologia sta dietro l'esito.</strong> Risultato in lingua-scuola; l'AI è un <em>come</em>, mai un titolo. ✅ "Materiali pronti anche per chi fa più fatica." ❌ "AI generativa per contenuti."</li>
+        <li><strong>Né hype né paura.</strong> Niente rivoluzione/disruption/AI-powered; niente minaccia/sostituzione.</li>
+      </ol>
+      <p><strong>Diciamo:</strong> scuola · persone · giornata · tempo · peso/leggero · in un posto solo · sul campo · nati dentro la scuola · processi chiari · tu decidi · meno serate · chi insegna, chi gestisce, chi cresce.</p>
+      <p><strong>Non diciamo (copy esterna):</strong> rivoluzione · disruption · trasformazione digitale · all'avanguardia · soluzione innovativa · AI-powered/AI-driven · ecosistema · ottimizzare · valore aggiunto · empowerment · <em>(persona-test)</em> liberare/liberarla · coinvolgente · "libro digitale vivo" · "presto un assistente" · <em>(spersonalizzanti)</em> utenti · target · mercato.</p>
+
+      <h5>Messaging architecture</h5>
+      <p><strong>Gerarchia:</strong> 1 messaggio-ombrello → 2 messaggi per motion (dirigente / docente) → proof points.</p>
+      <ul>
+        <li><em>Ombrello:</em> Le tecnologie nate dentro la scuola, per ridarle tempo e ordine.</li>
+        <li><em>Motion:</em> posizionamenti Sezione C (School Manager / Course Studio).</li>
+        <li><em>Proof points:</em> reasons-to-believe Sezione C.</li>
+      </ul>
+      <p><strong>Pay-off per pubblico — "Più X, meno Y"</strong> <em>(asset validato col Ministero)</em>:</p>
+      <table class="bs-table">
+        <thead>
+          <tr><th>Pubblico</th><th>Pay-off</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Docenti</td><td>Più impatto in classe, meno lavoro fuori.</td></tr>
+          <tr><td>Staff e segreteria</td><td>Più processi automatici, meno lavoro ripetitivo.</td></tr>
+          <tr><td>Dirigenza</td><td>Più decisioni informate, meno approssimazione.</td></tr>
+          <tr><td>Genitori</td><td>Più trasparenza e partecipazione, meno incertezza.</td></tr>
+          <tr><td>Studenti</td><td>Più voglia di scoprire, meno frustrazione.</td></tr>
+          <tr><td>Gruppi di scuole</td><td>Più coordinamento, meno dispersione.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>AI nella comunicazione:</strong> esiti in lingua-scuola; col tecnico/curioso se ne parla con orgoglio; mai "AI-powered"; sempre "propone, tu decidi"; i workshop/formazione sono il canale dove si smonta la paura.</p>
+
+      <!-- E -->
+      <h3 class="bs-h" id="bs-e">E · Governo</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Locked</span> obiettivi pilot, 0 dati oggi</span>
+      <p>Contesto: <strong>3 scuole in pilot da settembre 2026</strong>. Nessun dato attuale → E imposta gli <strong>obiettivi</strong> e la strumentazione, non misura il presente. Cadenza: <em>baseline a settembre → check a 3 mesi (dic 2026) → 6 mesi (mar 2027) → review fine anno (giu 2027).</em></p>
+
+      <h4>E.1 · Metriche-obiettivo (ogni metrica = prova di una promessa)</h4>
+      <table class="bs-table">
+        <thead>
+          <tr><th>Promessa (da A–D)</th><th>Metrica</th><th>Come si misura</th><th>Target proposto <em>(da validare)</em></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alleggerire (purpose)</td><td>ore/settimana risparmiate da segreteria e docenti (serate)</td><td>survey before/after + tracking task</td><td>riduzione netta misurabile a 6 mesi</td></tr>
+          <tr><td>Adozione, non installazione (valore #4)</td><td>% utenti attivi settimanali (docenti, staff) a 3 e 6 mesi</td><td>analytics prodotto</td><td>≥70% a 6 mesi</td></tr>
+          <tr><td>Un posto solo (gestionale)</td><td>n. sistemi/Excel sostituiti; dati persi = 0</td><td>audit iniziale vs finale</td><td>consolidamento + 0 perdite</td></tr>
+          <tr><td>Tu resti alla guida (human-led)</td><td>% docenti che dichiarano "decido io, non mi sostituisce"</td><td>survey</td><td>quota alta</td></tr>
+          <tr><td>Teacher-led (motion LMS)</td><td>n. docenti che adottano dopo il collega-pilota</td><td>tracking interno</td><td>crescita organica nelle 3 scuole</td></tr>
+          <tr><td>Fiducia / passaparola</td><td>NPS; n. scuole disposte a referenza pubblica</td><td>survey + relazione</td><td>NPS positivo; ≥2 su 3 referenziabili</td></tr>
+          <tr><td>Inclusività (Course Studio)</td><td>n. verifiche/materiali differenziati per chi fa più fatica</td><td>analytics prodotto</td><td>uso reale della differenziazione</td></tr>
+        </tbody>
+      </table>
+
+      <h4>E.2 · Il pilot è il motore del brand</h4>
+      <p>Le 3 scuole sono insieme: <strong>test</strong>, <strong>laboratorio sul campo</strong> (il fossato "nati sul campo") e <strong>fonte delle prove</strong> di vendita (Sezione C). <em>Obiettivo-brand del pilot:</em> uscirne con <strong>3 case study</strong>, <strong>≥2 referenze chiamabili</strong> e i <strong>primi numeri reali</strong> da mettere in copy ("già in uso in 3 scuole, −X ore a settimana").</p>
+
+      <h4>E.3 · Cosa NON cambiare per 3-5 anni</h4>
+      <p>Purpose, vision, mission, i 4 valori, onlyness, archetipi, i due posizionamenti, il principio FATTI/VETTORE. Tutto il resto evolve (claim, pay-off di campagna, vocabolario, personas, nomi di prodotto).</p>
+
+      <h4>E.4 · Filtri di decisione (come si usa il documento)</h4>
+      <ul>
+        <li><strong>Prodotto:</strong> mette l'umano alla guida? alleggerisce o appesantisce? nasce sul campo?</li>
+        <li><strong>Comunicazione:</strong> usa la voce (caldo, concreto, tu-decidi)? è libera da hype e gergo? mostra invece di promettere?</li>
+        <li><strong>Vendita:</strong> parla alla persona giusta (dirigente→gestionale, docente→LMS), non al "mercato"?</li>
+        <li>Ogni nuovo membro/fornitore legge questo documento prima di partire.</li>
+      </ul>
+
+      <h4>E.5 · Prossimi passi operativi</h4>
+      <ul>
+        <li>Strumentare i 3 pilot per misurare E.1 da settembre (baseline + rilevazioni 3/6 mesi).</li>
+        <li>Finalizzare i nomi prodotto (empowerEd: School Manager + Learning Platform/Course Studio + Family App; R&amp;D Gaming/Avatar).</li>
+        <li>Costruire i reasons-to-believe (Sez. C) man mano che il pilot li genera.</li>
+        <li>Nome definitivo del 4° valore.</li>
+        <li>Internazionalizzare le 6 personas.</li>
+      </ul>
+
+      <!-- Appendix -->
+      <h3 class="bs-h" id="bs-appendix">Appendice</h3>
+      <span class="bs-lock"><span class="tag tag--locked">Riferimento</span> libreria asset &amp; conflitti risolti</span>
+
+      <h4>Libreria di asset da riusare</h4>
+      <p><em>(dal doc "UniversiData &amp; empowerEd", riscritti tech-led)</em> — Materiale di qualità da integrare nelle sezioni sopra:</p>
+      <ul>
+        <li><strong>Scintilla / origini</strong> → A.</li>
+        <li><strong>Tono di voce</strong> con esempi ✅/❌, "Diciamo/Non diciamo" → D.</li>
+        <li><strong>"Cosa NON risolviamo"</strong> (disciplina dei no) → C.</li>
+        <li><strong>Formula pay-off "Più X, meno Y"</strong> + pay-off per audience → C/D.</li>
+        <li><strong>Dispositivo "drago"</strong> (nemico dichiarato) → da riformulare tech-led: <em>l'edtech costruita alla cieca, da chi non ha mai vissuto una scuola</em> (noi la costruiamo da dentro).</li>
+        <li><strong>Archetipi</strong> (Saggio/Custode) → da rivalidare sull'asse tech-led.</li>
+        <li><strong>Sei personas empowerEd</strong> (Beatrice, Roberto, Antonella, Giulia, Sofia, Paolo) → B.</li>
+      </ul>
+
+      <h4>Conflitti col vecchio doc già risolti (NON reintrodurre)</h4>
+      <ul>
+        <li>❌ "Costruire educando" come differenziatore centrale → declassato a verità di supporto.</li>
+        <li>❌ "School-led technology / la scuola guida / la tecnologia impara la scuola" → <strong>contraddice la ground truth</strong> ("la scuola non costruisce; noi costruiamo sfruttando i suoi punti deboli"). Agency: UniversiData è il costruttore; "nati dentro la scuola", non "guidati dalla scuola".</li>
+        <li>❌ Altitudine civile/filosofica ("aiutiamo l'umanità a stare al passo di sé stessa") → abbassata a prodotto-concreto + punta di filosofia.</li>
+        <li>❌ "colmare il divario studio/mondo" → parcheggiata come missione di una <em>scuola</em> futura, non di UniversiData.</li>
+      </ul>
+
+    </div><!-- /bs-content -->
+  </section>
+
+  </div><!-- /panel-strategy -->
 
   <footer>
     Universidata &mdash; Brand Assets &mdash; For internal use
